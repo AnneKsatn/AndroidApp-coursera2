@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MySecondTask</string>
+    <string name="action_find">Поиск</string>
+    <string name="action_logout">Выход</string>
+    <string name="action_options">Натсройки</string>
+    <string name="find_inGoogle">Найти в GOOGLE.COM</string>
+</resources>
