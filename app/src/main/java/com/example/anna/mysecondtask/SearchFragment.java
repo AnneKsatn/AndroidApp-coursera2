@@ -33,6 +33,8 @@ public class SearchFragment extends Fragment {
 
     };
 
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,4 +46,11 @@ public class SearchFragment extends Fragment {
         mButton.setOnClickListener(mFindInGoogle);
         return v;
     }
+
+
+
+
 }
+
+
+
