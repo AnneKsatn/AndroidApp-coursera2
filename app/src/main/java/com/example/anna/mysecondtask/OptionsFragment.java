@@ -1,7 +1,6 @@
 package com.example.anna.mysecondtask;
 
 import android.app.Fragment;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -62,6 +61,7 @@ public class OptionsFragment extends Fragment{
         editor.putInt(key, value);
         editor.apply();
     }
+
 
     private void LoadPreferences() {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences(

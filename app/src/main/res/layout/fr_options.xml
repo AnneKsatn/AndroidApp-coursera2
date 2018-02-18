@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <RadioGroup
@@ -12,19 +13,19 @@
             android:id="@+id/radioGoogle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Google"/>
+            android:text="@string/google"/>
 
         <RadioButton
             android:id="@+id/radioYandex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Яндекс"/>
+            android:text="@string/yandex"/>
 
         <RadioButton
             android:id="@+id/radioBind"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bing"/>
+            android:text="@string/bing"/>
     </RadioGroup>
 
 </android.support.constraint.ConstraintLayout>

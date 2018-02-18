@@ -1,5 +1,6 @@
 package com.example.anna.mysecondtask;
 
+import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
 import android.app.Fragment;
 import android.content.Intent;
@@ -12,12 +13,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static android.content.Context.MODE_PRIVATE;
+
 
 public class SearchFragment extends Fragment {
 
     private EditText mText;
     private Button mButton;
-    private String s = "https://www.google.ru/search?q=";
+    public static final String APP_PREFERENCES = "mysettings";
+    final String KEY_RADIOBUTTON_INDEX = "SAVED_RADIO_BUTTON_INDEX";
+    private String s = "";
 
 
     public static SearchFragment newInstance() {return new SearchFragment(); }
@@ -25,6 +30,25 @@ public class SearchFragment extends Fragment {
     private View.OnClickListener mFindInGoogle = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
+            SharedPreferences sharedPreferences = getActivity().getSharedPreferences(
+                    APP_PREFERENCES, MODE_PRIVATE);
+            int savedRadioIndex = sharedPreferences.getInt(
+                    KEY_RADIOBUTTON_INDEX, 0);
+            switch (savedRadioIndex) {
+                case 0:
+                    s = "https://www.google.ru/search?q=";
+                    break;
+                case 1:
+                    s = "https://yandex.ru/search/?text=";
+                    break;
+                case 2:
+                    s = "https://www.bing.com/?q=";
+                    break;
+                default:
+                    break;
+            }
+
             s=s+(mText.getText().toString());
             Intent BrowseIntent =
                     new Intent(Intent.ACTION_VIEW, Uri.parse(s));
@@ -44,6 +68,7 @@ public class SearchFragment extends Fragment {
         mText = v.findViewById(R.id.etInputText);
         mButton = v.findViewById(R.id.btFindInGoogle);
         mButton.setOnClickListener(mFindInGoogle);
+
         return v;
     }
 

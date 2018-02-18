@@ -2,6 +2,11 @@
     <string name="app_name">MySecondTask</string>
     <string name="action_find">Поиск</string>
     <string name="action_logout">Выход</string>
-    <string name="action_options">Натсройки</string>
+    <string name="action_options">Настройки</string>
     <string name="find_inGoogle">Найти в GOOGLE.COM</string>
+    <string name="input_text">Введите Текст</string>
+    <string name="google">Google</string>
+    <string name="yandex">Яндекс</string>
+    <string name="bing">Bing</string>
+    <string name="hello">Здравстуйте!</string>
 </resources>
